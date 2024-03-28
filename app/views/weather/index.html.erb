@@ -1,0 +1,11 @@
+<div>
+  <h1 class="font-bold text-4xl">Weather#index</h1>
+  <p>Find me in app/views/weather/index.html.erb</p>
+
+  <%= form_with url: root_path, method: :get do |f| %>
+    <%= f.text_field :address, value: @address %>
+    <button type="submit">Submit</button>
+  <% end %>
+
+  <%= "Cached" if @is_cached %>
+</div>
