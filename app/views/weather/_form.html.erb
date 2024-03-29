@@ -1,0 +1,12 @@
+<!-- Address form -->
+<div class="flex flex-row items-center justify-center">
+  <%= form_with url: root_path, method: :get,
+                html: { class: "flex flex-row space-x-1" } do |f| %>
+    <%= f.text_field :address, value: @address,
+                     placeholder: "Enter an address...",
+                     class: "flex-grow w-full rounded-md bg-slate-600 active:ring-slate-300 focus:ring-slate-300" %>
+    <button class="flex-shrink rounded-md bg-slate-500 px-2text-slate-200" type="submit">Submit</button>
+  <% end %>
+
+  <%= "Cached" if @is_cached %>
+</div>
